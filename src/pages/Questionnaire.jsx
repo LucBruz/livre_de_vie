@@ -7,6 +7,7 @@ import "./Questionnaire.css";
 const Questionnaire = () => {
   const [responses, setResponses] = useState({});
   const [loading, setLoading] = useState(true);
+  const [visibleQuestions, setVisibleQuestions] = useState([]);
 
   const fetchResponses = async () => {
     const user = (await supabase.auth.getUser()).data.user;
@@ -32,13 +33,30 @@ const Questionnaire = () => {
     fetchResponses();
   }, []);
 
-  if (loading)
-    return <p className="loading-message">Chargement des réponses…</p>;
+  // 1. On affiche les 5 premières immédiatement
+  useEffect(() => {
+    if (!loading) {
+      setVisibleQuestions(questionsData.slice(0, 5));
+
+      // 2. On affiche le reste après un petit délai
+      setTimeout(() => {
+        setVisibleQuestions(questionsData);
+      }, 1200); // ajuste ce délai à ton goût
+    }
+  }, [loading]);
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <p className="loading-message">Chargement des réponses…</p>
+      </div>
+    );
+  }
 
   return (
     <div className="questionnaire">
       <h1>📖 Mon Livre de Vie</h1>
-      {questionsData.map((question) => (
+      {visibleQuestions.map((question) => (
         <QuestionBlock
           key={question.id}
           question={question}

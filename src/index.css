@@ -66,6 +66,15 @@ button,
   transition: background-color 0.3s;
 }
 
+/* 🌗 Transition douce lors du changement de thème */
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
 /* 📱 Responsive minimaliste */
 @media (max-width: 600px) {
   body {
