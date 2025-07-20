@@ -1,0 +1,126 @@
+/* 📦 QuestionBlock container */
+.question-block {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+/* ✒️ ProseMirror editor */
+.ProseMirror {
+  min-height: 120px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.ProseMirror:focus {
+  outline: none;
+  border-color: #3a8dff;
+  box-shadow: 0 0 0 2px rgba(58, 141, 255, 0.2);
+}
+
+/* Styles enrichis dans le contenu */
+.ProseMirror strong {
+  font-weight: bold;
+  color: var(--text);
+}
+.ProseMirror em {
+  font-style: italic;
+  color: var(--text);
+}
+.ProseMirror u {
+  text-decoration: underline;
+  color: var(--text);
+}
+.ProseMirror h1 {
+  font-size: 1.75rem;
+}
+.ProseMirror h2 {
+  font-size: 1.5rem;
+}
+.ProseMirror h3 {
+  font-size: 1.25rem;
+}
+
+/* ✨ Toolbar */
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.toolbar-button {
+  width: 36px;
+  height: 36px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-size: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.toolbar-button:hover {
+  background-color: #3a8dff;
+  color: #fff;
+  border-color: #3a8dff;
+}
+
+/* 🎨 Menu de sélection de couleurs */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--text);
+  border-radius: 6px;
+  position: absolute;
+  z-index: 999;
+}
+
+.color-cell {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-cell:hover {
+  transform: scale(1.1);
+}
+
+/* 🌙 Dark mode boutons */
+[data-theme="dark"] .toolbar-button {
+  background-color: #2a2a2a;
+  border-color: #aaa;
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] .toolbar-button:hover {
+  background-color: #3a8dff;
+  color: #fff;
+  border-color: #3a8dff;
+}

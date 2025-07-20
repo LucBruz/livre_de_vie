@@ -1,0 +1,267 @@
+[
+  {
+    "id": 1,
+    "category": "Enfance et jeunesse",
+    "question": "Quel est ton plus ancien souvenir d'enfance ?"
+  },
+  {
+    "id": 2,
+    "category": "Enfance et jeunesse",
+    "question": "Quelle est la plus grosse bêtise que tu aies faite dans ta jeunesse et qui te fait encore sourire aujourd'hui ?"
+  },
+  {
+    "id": 3,
+    "category": "Enfance et jeunesse",
+    "question": "Quand tu étais enfant, qu'est-ce que tu rêvais de devenir plus tard ? Tes aspirations ont-elles changé en grandissant ?"
+  },
+  {
+    "id": 4,
+    "category": "Enfance et jeunesse",
+    "question": "Qu'est-ce qui te manque le plus de l'époque de ton enfance ?"
+  },
+
+  {
+    "id": 5,
+    "category": "Famille et origines",
+    "question": "Y a-t-il une tradition familiale ou une histoire du passé dans ta famille que tu chéris particulièrement ?"
+  },
+  {
+    "id": 6,
+    "category": "Famille et origines",
+    "question": "Quelle relation avais-tu avec tes parents quand tu étais jeune, et qu'est-ce que tu as retenu de leur façon de t'élever ?"
+  },
+  {
+    "id": 7,
+    "category": "Famille et origines",
+    "question": "Y a-t-il un trait de caractère ou une habitude que tu penses avoir hérité de tes parents ou grands-parents ?"
+  },
+  {
+    "id": 8,
+    "category": "Famille et origines",
+    "question": "Quelle personne dans ta famille t'a le plus marqué ou influencé, et de quelle manière ?"
+  },
+
+  {
+    "id": 9,
+    "category": "Amour et vie de couple",
+    "question": "Comment as-tu rencontré l'amour de ta vie (ton/ta conjoint(e)) ? Raconte-moi vos débuts."
+  },
+  {
+    "id": 10,
+    "category": "Amour et vie de couple",
+    "question": "Quelle est la chose la plus folle ou romantique que tu aies faite par amour ?"
+  },
+  {
+    "id": 11,
+    "category": "Amour et vie de couple",
+    "question": "Quel conseil donnerais-tu à de jeunes couples pour construire une relation solide et durable ?"
+  },
+  {
+    "id": 12,
+    "category": "Amour et vie de couple",
+    "question": "Que signifie l'amour pour toi après toutes ces années d'expérience ?"
+  },
+
+  {
+    "id": 13,
+    "category": "Parentalité et vie de famille",
+    "question": "Comment as-tu vécu le fait de devenir parent pour la première fois ?"
+  },
+  {
+    "id": 14,
+    "category": "Parentalité et vie de famille",
+    "question": "Quelle est la plus grande leçon que tes enfants t'ont apprise ?"
+  },
+  {
+    "id": 15,
+    "category": "Parentalité et vie de famille",
+    "question": "De quoi es-tu le plus fier/fière en tant que parent ?"
+  },
+  {
+    "id": 16,
+    "category": "Parentalité et vie de famille",
+    "question": "Quel souvenir en famille avec tes enfants ou petits-enfants te tient le plus à cœur ?"
+  },
+
+  {
+    "id": 17,
+    "category": "Amitiés et influences",
+    "question": "Qui est l'ami(e) qui a le plus compté dans ta vie, et qu'est-ce qui rend cette amitié spéciale ?"
+  },
+  {
+    "id": 18,
+    "category": "Amitiés et influences",
+    "question": "Y a-t-il une personne en dehors de ta famille qui a profondément influencé ta vision de la vie ?"
+  },
+  {
+    "id": 19,
+    "category": "Amitiés et influences",
+    "question": "Quelle est la personne la plus bienveillante que tu aies rencontrée, et qu'as-tu retenu de sa gentillesse ?"
+  },
+  {
+    "id": 20,
+    "category": "Amitiés et influences",
+    "question": "Parmi tes amitiés, y en a-t-il qui durent depuis des décennies ? Comment ces relations ont-elles évolué avec le temps ?"
+  },
+
+  {
+    "id": 21,
+    "category": "Vie professionnelle",
+    "question": "Quel métier rêvais-tu d'exercer quand tu étais jeune, et comment s'est finalement déroulé ton parcours professionnel ?"
+  },
+  {
+    "id": 22,
+    "category": "Vie professionnelle",
+    "question": "Quel a été le plus grand défi de ta carrière, et comment l'as-tu surmonté ?"
+  },
+  {
+    "id": 23,
+    "category": "Vie professionnelle",
+    "question": "De quelle réalisation professionnelle es-tu le plus fier/fière ?"
+  },
+  {
+    "id": 24,
+    "category": "Vie professionnelle",
+    "question": "Si tu pouvais changer de carrière ou essayer un autre métier, lequel choisirais-tu et pourquoi ?"
+  },
+
+  {
+    "id": 25,
+    "category": "Passions et loisirs",
+    "question": "Quel hobby ou quelle passion t'accompagne depuis de longues années, et pourquoi y tiens-tu autant ?"
+  },
+  {
+    "id": 26,
+    "category": "Passions et loisirs",
+    "question": "As-tu un talent caché ou une passion dont peu de gens sont au courant ?"
+  },
+  {
+    "id": 27,
+    "category": "Passions et loisirs",
+    "question": "Quel livre, film ou chanson a marqué ta jeunesse au point que tu t'en souviennes encore clairement aujourd'hui ?"
+  },
+  {
+    "id": 28,
+    "category": "Passions et loisirs",
+    "question": "Quelle activité ou quel endroit te permet de te ressourcer et de te sentir pleinement toi-même ?"
+  },
+
+  {
+    "id": 29,
+    "category": "Moments marquants",
+    "question": "Quel voyage ou quelle destination t'a le plus marqué, et qu'en as-tu retiré ?"
+  },
+  {
+    "id": 30,
+    "category": "Moments marquants",
+    "question": "Y a-t-il un événement historique que tu as vécu qui t'a particulièrement marqué ?"
+  },
+  {
+    "id": 31,
+    "category": "Moments marquants",
+    "question": "Quel a été l'un des moments les plus heureux de ta vie, où tu t'es senti(e) vraiment comblé(e) ?"
+  },
+  {
+    "id": 32,
+    "category": "Moments marquants",
+    "question": "Y a-t-il eu un événement ou un tournant personnel qui a changé le cours de ta vie ou ta façon de voir les choses ?"
+  },
+
+  {
+    "id": 33,
+    "category": "Sagesse et leçons de vie",
+    "question": "Quelle est la plus grande leçon de vie que tu aies apprise au fil des années ?"
+  },
+  {
+    "id": 34,
+    "category": "Sagesse et leçons de vie",
+    "question": "Quel est le meilleur conseil que l'on t'ait donné un jour, et que tu suis encore aujourd'hui ?"
+  },
+  {
+    "id": 35,
+    "category": "Sagesse et leçons de vie",
+    "question": "Si tu pouvais donner un conseil au jeune toi de 20 ans, que lui dirais-tu ?"
+  },
+  {
+    "id": 36,
+    "category": "Sagesse et leçons de vie",
+    "question": "Pour quelle chose dans ta vie éprouves-tu le plus de gratitude aujourd'hui ?"
+  },
+
+  {
+    "id": 37,
+    "category": "Regard sur le monde",
+    "question": "Que penses-tu des changements survenus dans le monde depuis ta jeunesse ?"
+  },
+  {
+    "id": 38,
+    "category": "Regard sur le monde",
+    "question": "Y a-t-il des aspects de la société actuelle qui te surprennent ou t'impressionnent particulièrement ?"
+  },
+
+  {
+    "id": 39,
+    "category": "Projets et rêves",
+    "question": "Y a-t-il un rêve ou un projet que tu voudrais encore accomplir dans les années à venir ?"
+  },
+  {
+    "id": 40,
+    "category": "Projets et rêves",
+    "question": "Quel est un projet que tu as abandonné mais que tu regrettes encore aujourd’hui ?"
+  },
+
+  {
+    "id": 41,
+    "category": "Spiritualité et croyances",
+    "question": "Quelle place la spiritualité ou la religion a-t-elle eu dans ta vie ?"
+  },
+  {
+    "id": 42,
+    "category": "Spiritualité et croyances",
+    "question": "As-tu vécu un moment où tu as ressenti une forme de paix intérieure ou de révélation ?"
+  },
+
+  {
+    "id": 43,
+    "category": "Vie quotidienne",
+    "question": "Comment était ta routine quotidienne dans ta jeunesse ? Et aujourd'hui, est-elle différente ?"
+  },
+  {
+    "id": 44,
+    "category": "Vie quotidienne",
+    "question": "Quel plat ou quelle recette te ramène immédiatement à un souvenir particulier ?"
+  },
+
+  {
+    "id": 45,
+    "category": "Valeurs et convictions",
+    "question": "Quelles sont les valeurs fondamentales que tu t'efforces de transmettre autour de toi ?"
+  },
+  {
+    "id": 46,
+    "category": "Valeurs et convictions",
+    "question": "Y a-t-il une cause qui te tient particulièrement à cœur ?"
+  },
+
+  {
+    "id": 47,
+    "category": "Temps et souvenirs",
+    "question": "Si tu pouvais revivre une seule journée de ta vie, laquelle choisirais-tu et pourquoi ?"
+  },
+  {
+    "id": 48,
+    "category": "Temps et souvenirs",
+    "question": "As-tu des objets que tu conserves précieusement pour leur valeur sentimentale ?"
+  },
+
+  {
+    "id": 49,
+    "category": "Héritage et transmission",
+    "question": "Comment aimerais-tu qu'on se souvienne de toi plus tard ?"
+  },
+  {
+    "id": 50,
+    "category": "Héritage et transmission",
+    "question": "Quelle empreinte souhaites-tu laisser dans le cœur de tes proches ?"
+  }
+]
