@@ -97,7 +97,10 @@ const Questionnaire = forwardRef((props, ref) => {
           ref={idx === visibleQuestions.length - 1 ? lastQuestionRef : null}
         >
           <QuestionBlock
-            question={question}
+            question={{
+              ...question,
+              question: `#${question.id}. ${question.question}`,
+            }}
             defaultContent={responses[question.id] || ""}
             onContentChange={(html) => {
               responsesRef.current[question.id] = html;

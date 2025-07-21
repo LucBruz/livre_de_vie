@@ -3,21 +3,46 @@ import HTMLFlipBook from "react-pageflip";
 import "./AnswerBook.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// Page de couverture (avant / arrière)
-const PageCover = React.forwardRef(({ children }, ref) => (
-  <div className="page page-cover" ref={ref} data-density="hard">
-    <div className="page-content">
-      <h2>{children}</h2>
+// Couverture avant stylée
+const PageCoverFront = React.forwardRef(({ children }, ref) => (
+  <div
+    className="page page-cover page-cover-front"
+    ref={ref}
+    data-density="hard"
+  >
+    <div className="cover-content">
+      <div className="cover-icon">📘</div>
+      <h2 className="cover-title">{children}</h2>
     </div>
   </div>
 ));
-PageCover.displayName = "PageCover";
+PageCoverFront.displayName = "PageCoverFront";
 
-// Page intérieure avec contenu
-const Page = React.forwardRef(({ question, content, number }, ref) => (
+// Couverture arrière stylée
+const PageCoverBack = React.forwardRef(({ children }, ref) => (
+  <div
+    className="page page-cover page-cover-back"
+    ref={ref}
+    data-density="hard"
+  >
+    <div className="cover-content">
+      <h2 className="cover-title">{children}</h2>
+      <p className="cover-quote">
+        « Chaque page tournée est une trace de toi. »
+      </p>
+      <div className="cover-signature">— Ton livre de vie</div>
+    </div>
+  </div>
+));
+PageCoverBack.displayName = "PageCoverBack";
+
+// Pages intérieures
+const Page = React.forwardRef(({ id, question, content, number }, ref) => (
   <div className="page" ref={ref}>
     <div className="page-content">
-      <h4 className="page-header">📝 {question}</h4>
+      <h4 className="page-header">
+        #{id}. {question}
+      </h4>
       <div
         className="page-text"
         dangerouslySetInnerHTML={{ __html: content }}
@@ -36,10 +61,7 @@ const AnswerBook = () => {
 
   const pages = location.state?.pages || [];
 
-  const onFlip = (e) => {
-    setCurrentPage(e.data);
-  };
-
+  const onFlip = (e) => setCurrentPage(e.data);
   const next = () => bookRef.current?.pageFlip().flipNext();
   const prev = () => bookRef.current?.pageFlip().flipPrev();
 
@@ -72,18 +94,19 @@ const AnswerBook = () => {
         ref={bookRef}
         onFlip={onFlip}
       >
-        <PageCover>📘 Mon Livre de Vie</PageCover>
+        <PageCoverFront>Mon Livre de Vie</PageCoverFront>
 
         {pages.map((p, i) => (
           <Page
             key={i}
+            id={p.id}
             question={p.question}
             content={p.content}
             number={i + 1}
           />
         ))}
 
-        <PageCover>📖 Merci pour votre lecture</PageCover>
+        <PageCoverBack>Merci pour votre lecture</PageCoverBack>
       </HTMLFlipBook>
 
       <div className="book-controls">

@@ -15,6 +15,7 @@ function AppRoutes() {
 
     // 📚 Créer les pages formatées à partir des questions et réponses
     const formattedPages = questionsData.map((q) => ({
+      id: q.id,
       question: q.question,
       content: responses[q.id] || "<p>(pas encore rempli)</p>",
     }));

@@ -48,7 +48,7 @@ body {
 }
 
 .page-header {
-  font-size: 22px;
+  font-size: 16px;
   margin-bottom: 1rem;
 }
 
@@ -86,4 +86,78 @@ body {
 .book-controls button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+.page-cover-front {
+  background: linear-gradient(to bottom, #3e64ff, #547aff);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Georgia", serif;
+}
+
+.page-cover-back {
+  background-color: #fff;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Georgia", serif;
+}
+
+.cover-content {
+  text-align: center;
+  max-width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cover-icon {
+  font-size: 72px;
+  margin-bottom: 1.5rem;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.cover-title {
+  font-size: 26px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cover-quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #666;
+  margin-top: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cover-signature {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Petite animation de l’icône */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Ajustement de taille des titres de questions */
+.page-header {
+  font-size: 16px;
+  margin-bottom: 1rem;
 }
