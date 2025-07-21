@@ -1,0 +1,37 @@
+.logout-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #d7372a;
+}
+
+.view-book-button {
+  position: fixed;
+  top: 4.5rem; /* 👈 sous le bouton logout (1rem + hauteur + marge) */
+  left: 1rem;
+  background-color: #3e64ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.view-book-button:hover {
+  background-color: #2d50cc;
+}

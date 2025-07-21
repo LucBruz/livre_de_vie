@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import { supabase } from "./supabaseClient";
 import Auth from "./pages/Auth";
 import ToggleMode from "./components/ToggleMode";
-import LogoutButton from "./components/LogoutButton";
-import Questionnaire from "./pages/Questionnaire";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -19,7 +19,6 @@ function App() {
         data: { session },
       } = await supabase.auth.getSession();
 
-      // Cas : session présente mais l'utilisateur ne voulait pas rester connecté
       if (session && !stayLoggedIn && navigationType === "navigate") {
         await supabase.auth.signOut();
         setSession(null);
@@ -47,17 +46,14 @@ function App() {
   if (isLoading) return null;
 
   return (
-    <>
+    <BrowserRouter>
       <ToggleMode />
       {session ? (
-        <>
-          <LogoutButton />
-          <Questionnaire />
-        </>
+        <AppRoutes />
       ) : (
         <Auth onLogin={() => window.location.reload()} />
       )}
-    </>
+    </BrowserRouter>
   );
 }
 

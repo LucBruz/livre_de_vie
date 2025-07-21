@@ -1,4 +1,11 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import questionsData from "../json/questions.json";
 import { supabase } from "../supabaseClient";
 import QuestionBlock from "../components/QuestionBlock";
@@ -6,12 +13,20 @@ import "./Questionnaire.css";
 
 const QUESTIONS_PER_PAGE = 5;
 
-const Questionnaire = () => {
+const Questionnaire = forwardRef((props, ref) => {
   const [responses, setResponses] = useState({});
   const [loading, setLoading] = useState(true);
   const [questionIndex, setQuestionIndex] = useState(QUESTIONS_PER_PAGE);
   const [observerLoading, setObserverLoading] = useState(false);
   const observerRef = useRef(null);
+
+  // Ici on stocke les réponses remplies localement
+  const responsesRef = useRef({});
+
+  // On expose la méthode au parent
+  useImperativeHandle(ref, () => ({
+    getAllResponses: () => responsesRef.current,
+  }));
 
   const fetchResponses = async () => {
     const user = (await supabase.auth.getUser()).data.user;
@@ -26,6 +41,7 @@ const Questionnaire = () => {
       const mapped = {};
       data.forEach((entry) => {
         mapped[entry.question_id] = entry.content;
+        responsesRef.current[entry.question_id] = entry.content;
       });
       setResponses(mapped);
     }
@@ -45,10 +61,9 @@ const Questionnaire = () => {
         Math.min(prev + QUESTIONS_PER_PAGE, questionsData.length)
       );
       setObserverLoading(false);
-    }, 600); // petite pause pour simuler chargement
+    }, 600);
   }, [questionIndex]);
 
-  // Lazy loading au scroll via IntersectionObserver
   const lastQuestionRef = useCallback(
     (node) => {
       if (observerLoading) return;
@@ -84,6 +99,9 @@ const Questionnaire = () => {
           <QuestionBlock
             question={question}
             defaultContent={responses[question.id] || ""}
+            onContentChange={(html) => {
+              responsesRef.current[question.id] = html;
+            }}
           />
         </div>
       ))}
@@ -94,6 +112,6 @@ const Questionnaire = () => {
       )}
     </div>
   );
-};
+});
 
 export default Questionnaire;

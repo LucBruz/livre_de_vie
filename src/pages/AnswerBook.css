@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.book-container {
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  /* background-color: #fff; */
+  color: #000;
+}
+
+.light-only {
+  background-color: white !important;
+  color: black !important;
+}
+
+.book {
+  font-family: Georgia, serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.page {
+  background-color: white !important;
+  color: black !important;
+  overflow: hidden;
+  height: 100%;
+}
+
+.page-cover {
+  background-color: #3e64ff !important;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.page-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-header {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+.page-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.page-footer {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 14px;
+  color: #999;
+}
+
+.book-controls {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.book-controls button {
+  background-color: #3e64ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

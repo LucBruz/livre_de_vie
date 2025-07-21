@@ -1,42 +1,55 @@
+/* Reset global */
+html,
+body,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Vue LIVRE centrée */
+.book-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Livre (book) */
+.book-flip {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: Georgia, serif;
+  width: 100%;
+  max-width: 1100px;
+  height: 700px;
+  background: white;
+}
+
+/* Page intérieure */
+.book-page {
   padding: 2rem;
-  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  background: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Couverture */
+.book-cover,
+.book-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #3e64ff;
+  color: white;
+  font-weight: bold;
 }
