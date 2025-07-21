@@ -1,16 +1,26 @@
-.logout-button {
+.floating-button {
+  width: 15rem;
+  height: 2.5rem;
+  line-height: 1.2rem;
+  text-align: center;
+  display: block;
   position: fixed;
-  top: 1rem;
   left: 1rem;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0; /* ✅ uniquement en haut/bas, pas à gauche/droite */
   border-radius: 6px;
   font-size: 1rem;
+  border: none;
+  color: white;
   cursor: pointer;
   z-index: 1000;
   transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+/* Individuelles avec couleur et position */
+.logout-button {
+  top: 1rem;
+  background-color: #f44336;
 }
 
 .logout-button:hover {
@@ -18,20 +28,19 @@
 }
 
 .view-book-button {
-  position: fixed;
-  top: 4.5rem; /* 👈 sous le bouton logout (1rem + hauteur + marge) */
-  left: 1rem;
+  top: 4.5rem;
   background-color: #3e64ff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-  transition: background-color 0.3s;
 }
 
 .view-book-button:hover {
   background-color: #2d50cc;
+}
+
+.download-pdf-button {
+  top: 8rem;
+  background-color: #4caf50;
+}
+
+.download-pdf-button:hover {
+  background-color: #3c8e3c;
 }
