@@ -3,6 +3,8 @@ import { Editor } from "@tinymce/tinymce-react";
 
 const RichEditor = ({ initialContent, onChange }) => {
   const editorRef = useRef(null);
+  const [content, setContent] = useState(initialContent);
+
   const [theme, setTheme] = useState(
     document.documentElement.getAttribute("data-theme") === "dark"
       ? "dark"
@@ -23,13 +25,18 @@ const RichEditor = ({ initialContent, onChange }) => {
     return () => observer.disconnect();
   }, []);
 
+  const handleEditorChange = (value) => {
+    setContent(value); // garde dans le state local
+    onChange(value); // envoie au parent
+  };
+
   return (
     <Editor
-      key={theme} // 🔁 Force le démontage/remontage du composant à chaque changement de thème
+      key={theme} // nécessaire pour recharger le skin si le thème change
       apiKey="t3r5t96s0cq48fvh3twzdtk0eq9lb00qmi1drh7navv0e9sn"
-      initialValue={initialContent}
+      value={content} // 💥 remplace initialValue
+      onEditorChange={handleEditorChange}
       onInit={(_, editor) => (editorRef.current = editor)}
-      onEditorChange={onChange}
       init={{
         height: 300,
         menubar: false,

@@ -23,3 +23,9 @@
   align-items: center;
   margin-top: 3rem;
 }
+.loading-spinner {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #888;
+}
